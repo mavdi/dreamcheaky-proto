@@ -1,0 +1,25 @@
+#buttons {
+  width: 560px;
+}
+#buttons a {
+  width: 100px;
+}
+#buttons > a {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+#buttons .camview {
+  background: grey;
+  width: 300px;
+  height: 200px;
+}
+#buttons .middle-buttons {
+  min-height: 200px;
+}
+#buttons .middle-buttons > div {
+  display: inline-block;
+}
+#buttons .middle-buttons a {
+  margin-bottom: 80px;
+}

@@ -1,0 +1,30 @@
+@camheight: 200px;
+
+#buttons {
+	width : 560px;
+	a {
+		width : 100px;
+	}
+	> a {
+		display: block;
+		margin: 10px auto;
+		text-align: center;
+	}
+
+	.camview {
+		background: grey;
+		width: 300px;
+		height: @camheight;
+	}
+
+	.middle-buttons {
+		min-height: @camheight;
+		> div {
+			display: inline-block;
+		}
+
+		a {
+			margin-bottom: (@camheight - 40) / 2;
+		}
+	}
+}

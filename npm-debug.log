@@ -1,0 +1,104 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.2.10
+3 info using node@v0.8.19
+4 verbose read json /Users/mavdi/usb-rocket-launcher-node/package.json
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/mavdi/usb-rocket-launcher-node',
+6 verbose install   [ 'express', 'jade' ] ]
+7 verbose from cache /Users/mavdi/usb-rocket-launcher-node/package.json
+8 info preinstall application-name@0.0.1
+9 verbose read json /Users/mavdi/usb-rocket-launcher-node/node_modules/async/package.json
+10 verbose read json /Users/mavdi/usb-rocket-launcher-node/node_modules/ejs/package.json
+11 verbose read json /Users/mavdi/usb-rocket-launcher-node/node_modules/express/package.json
+12 verbose read json /Users/mavdi/usb-rocket-launcher-node/node_modules/jade/package.json
+13 verbose read json /Users/mavdi/usb-rocket-launcher-node/node_modules/node-usb/package.json
+14 verbose read json /Users/mavdi/usb-rocket-launcher-node/node_modules/underscore/package.json
+15 verbose from cache /Users/mavdi/usb-rocket-launcher-node/package.json
+16 verbose readDependencies using package.json deps
+17 verbose from cache /Users/mavdi/usb-rocket-launcher-node/node_modules/async/package.json
+18 verbose from cache /Users/mavdi/usb-rocket-launcher-node/node_modules/ejs/package.json
+19 verbose from cache /Users/mavdi/usb-rocket-launcher-node/node_modules/express/package.json
+20 verbose from cache /Users/mavdi/usb-rocket-launcher-node/node_modules/jade/package.json
+21 verbose from cache /Users/mavdi/usb-rocket-launcher-node/node_modules/node-usb/package.json
+22 verbose from cache /Users/mavdi/usb-rocket-launcher-node/node_modules/underscore/package.json
+23 verbose already installed skipping express@2.5.8 /Users/mavdi/usb-rocket-launcher-node
+24 verbose already installed skipping jade@>= 0.0.1 /Users/mavdi/usb-rocket-launcher-node
+25 silly resolved []
+26 info build /Users/mavdi/usb-rocket-launcher-node
+27 verbose from cache /Users/mavdi/usb-rocket-launcher-node/package.json
+28 verbose linkStuff [ false, false, false, '/Users/mavdi' ]
+29 info linkStuff application-name@0.0.1
+30 verbose linkBins application-name@0.0.1
+31 verbose linkMans application-name@0.0.1
+32 verbose rebuildBundles application-name@0.0.1
+33 verbose rebuildBundles [ '.bin',
+33 verbose rebuildBundles   '.DS_Store',
+33 verbose rebuildBundles   'async',
+33 verbose rebuildBundles   'ejs',
+33 verbose rebuildBundles   'express',
+33 verbose rebuildBundles   'jade',
+33 verbose rebuildBundles   'node-usb',
+33 verbose rebuildBundles   'underscore' ]
+34 verbose rebuild bundle /Users/mavdi/usb-rocket-launcher-node/node_modules/async
+35 info build /Users/mavdi/usb-rocket-launcher-node/node_modules/async
+36 verbose from cache /Users/mavdi/usb-rocket-launcher-node/node_modules/async/package.json
+37 info preinstall async@0.2.5
+38 verbose linkStuff [ false,
+38 verbose linkStuff   false,
+38 verbose linkStuff   false,
+38 verbose linkStuff   '/Users/mavdi/usb-rocket-launcher-node/node_modules' ]
+39 info linkStuff async@0.2.5
+40 verbose linkBins async@0.2.5
+41 verbose linkMans async@0.2.5
+42 verbose rebuildBundles async@0.2.5
+43 info install async@0.2.5
+44 info postinstall async@0.2.5
+45 verbose rebuild bundle /Users/mavdi/usb-rocket-launcher-node/node_modules/ejs
+46 info build /Users/mavdi/usb-rocket-launcher-node/node_modules/ejs
+47 verbose from cache /Users/mavdi/usb-rocket-launcher-node/node_modules/ejs/package.json
+48 info preinstall ejs@0.8.3
+49 verbose linkStuff [ false,
+49 verbose linkStuff   false,
+49 verbose linkStuff   false,
+49 verbose linkStuff   '/Users/mavdi/usb-rocket-launcher-node/node_modules' ]
+50 info linkStuff ejs@0.8.3
+51 verbose linkBins ejs@0.8.3
+52 verbose linkMans ejs@0.8.3
+53 verbose rebuildBundles ejs@0.8.3
+54 info install ejs@0.8.3
+55 info postinstall ejs@0.8.3
+56 verbose rebuild bundle /Users/mavdi/usb-rocket-launcher-node/node_modules/node-usb
+57 info build /Users/mavdi/usb-rocket-launcher-node/node_modules/node-usb
+58 verbose from cache /Users/mavdi/usb-rocket-launcher-node/node_modules/node-usb/package.json
+59 info preinstall node-usb@0.0.1
+60 verbose linkStuff [ false,
+60 verbose linkStuff   false,
+60 verbose linkStuff   false,
+60 verbose linkStuff   '/Users/mavdi/usb-rocket-launcher-node/node_modules' ]
+61 info linkStuff node-usb@0.0.1
+62 verbose linkBins node-usb@0.0.1
+63 verbose linkMans node-usb@0.0.1
+64 verbose rebuildBundles node-usb@0.0.1
+65 info install node-usb@0.0.1
+66 verbose unsafe-perm in lifecycle true
+67 silly exec sh "-c" "node-waf configure build"
+68 silly sh,-c,node-waf configure build,/Users/mavdi/usb-rocket-launcher-node/node_modules/node-usb spawning
+69 info node-usb@0.0.1 Failed to exec install script
+70 error node-usb@0.0.1 install: `node-waf configure build`
+70 error `sh "-c" "node-waf configure build"` failed with 1
+71 error Failed at the node-usb@0.0.1 install script.
+71 error This is most likely a problem with the node-usb package,
+71 error not with npm itself.
+71 error Tell the author that this fails on your system:
+71 error     node-waf configure build
+71 error You can get their info via:
+71 error     npm owner ls node-usb
+71 error There is likely additional logging output above.
+72 error System Darwin 12.2.0
+73 error command "node" "/usr/local/bin/npm" "install"
+74 error cwd /Users/mavdi/usb-rocket-launcher-node
+75 error node -v v0.8.19
+76 error npm -v 1.2.10
+77 error code ELIFECYCLE
+78 verbose exit [ 1, true ]
