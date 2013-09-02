@@ -4,6 +4,7 @@ $(document).ready(function() {
 });
 
 var App = function() {
+    "use strict";
     var lastCommand;
     var commandArray = [];
     var keyMapping = {
@@ -21,7 +22,7 @@ var App = function() {
             sendCommand($(this).data("command"));
         });
          $("#buttons a").mouseup(function() {
-            sendCommand("stop");
+            removeCommand($(this).data("command"));
         });
     }
 
@@ -30,26 +31,44 @@ var App = function() {
     }
 
     var keyUp = function(event) {
-        sendCommand("stop");
+        removeCommand(keyMapping[event.keyCode]);
     }
 
     var sendCommand = function(command) {
-        if(lastCommand === "shoot" && command === "stop") {
-            lastCommand = "";
-            return;
+        if($.inArray("stop", commandArray) > -1) {
+            commandArray = [];
         }
-        lastCommand = command;
-            $.ajax({
-            url : '/perform_command/' + command,
-            success : function(data)
+
+        if($.inArray(command, commandArray) == -1) {
+            commandArray.push(command); 
+        }
+
+        console.log(commandArray.length);
+
+        sendCommandArray(commandArray);
+        
+    }
+
+    var sendCommandArray = function(commandArrayToSend) {
+        $.ajax({
+        url : '/perform_command/' + commandArrayToSend,
+        success : function(data)
             {
 
             }
-        });
+        });   
     }
 
     var removeCommand = function(command) {
-        
+        $.each(commandArray, function(index, item) {
+            if(item === command || item == "") {
+                commandArray.splice(index, 1);
+            }
+        });
+        if(commandArray.length == 0) {
+            commandArray = ["stop"];
+        }
+        sendCommandArray(commandArray);
     }
 
 

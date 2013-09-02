@@ -43,20 +43,31 @@ function RocketLauncher()
 
   this.runCommand = function(command)
   {
-    console.log('Command is "'+ command +'"');
 
-    if(this.commands[command])
-    {
-      signal = this.commands[command];
+    var commandArray = command.split(",");
+    var signal = 0;
+    console.log('Command is "'+ commandArray +'"');
+
+    for(var i = 0; i < commandArray.length; i++) {
+      var itemisedSignal = 0;
+      if(this.commands[commandArray[i]])
+      {
+        itemisedSignal = this.commands[commandArray[i]];
+      }
+      else if(commandArray[i] == 'test')
+      {
+        return this.testFunctions();
+      }
+      else
+      {
+        itemisedSignal = eval(commandArray[i]);
+      }
+
+      signal += itemisedSignal;
+      console.log("itemisedSignal is " + itemisedSignal);
     }
-    else if(command == 'test')
-    {
-      return this.testFunctions();
-    }
-    else
-    {
-      signal = eval(command);
-    }
+
+    console.log("signal is " + signal);
 
     this.launcher_device.controlTransfer(
       new Buffer([0x02, signal, 0x00,0x00,0x00,0x00,0x00,0x00]),
@@ -64,7 +75,6 @@ function RocketLauncher()
       function(data)
       {
         console.log(command)
-        console.log(data);
       }
     );
   };
